@@ -12,13 +12,13 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
-- [ ] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
-- [ ] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
-- [ ] Make commits often! PUSH TO MAIN!!!
-- [ ] You can run tests locally by running npm run test.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [X] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [X] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
+- [X] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
+- [X] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
+- [X] Make commits often! PUSH TO MAIN!!!
+- [X] You can run tests locally by running npm run test.
+- [X] Check to see that Codegrade has accepted your git submission.
 
 ## Project Instructions
 
@@ -36,9 +36,9 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
-- [ ] Set the list of characters into state.
-- [ ] Render your characters to the DOM:
+- [X] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
+- [X] Set the list of characters into state.
+- [X] Render your characters to the DOM:
 
   1. Build a React component named 'Character' to render an individual character.
   1. Map over the list in state, and for each character render a Character to the page.
@@ -61,24 +61,31 @@ Your finished project must include all of the following requirements:
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
 
-- [ ] Make the Character component more complex and break it into several subcomponents.
-- [ ] Use the endpoint `[GET] https://swapi.dev/api/films` (mocked in msw) to obtain movie information to render with the characters.
-- [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
-- [ ] Create transitions or animations with styled-components.
-- [ ] Use Promise.all to resolve an array of promises.
+- [X] Make the Character component more complex and break it into several subcomponents.
+- [X] Use the endpoint `[GET] https://swapi.dev/api/films` (mocked in msw) to obtain movie information to render with the characters.
+- [X] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
+- [X] Create transitions or animations with styled-components.
+- [X] Use Promise.all to resolve an array of promises.
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes to the main branch.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
+- [X] Submit via Codegrade by committing and pushing any new changes to the main branch.
+- [X] Check Codegrade for automated feedback.
+- [X] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
+- [X] Any changes pushed after the deadline will not receive any feedback.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+-React is a library that abstracts away the tedious methods for rendering to the DOM of components such as the method document.getElementByClassname. React interacts with the DOM through an engine created by the React team called the ‘virtual DOM’. This virtual DOM acts as the middle-man between the developer and the actual DOM. The way the virtual DOM interacts with the code is that it keeps track of the elements/apps on the page and whenever it sees a change in an app it will send that specific change to the actual DOM allowing it to selectively render only the changes rather than the whole page. React is useful because it allows a page of content to independently render singular elements/apps on a page when changes are made to them rather than refreshing the entire page every time that there is a change in the content.
+
+2. Describe component state.
+-State is when you have values within a component that you need to track the value of and detect changes to those values in order to apply those changes elsewhere.
+
+3. Describe props.
+ -Props is a keyword in React that is used to pass data from one component to another. From a parent to a child and is short for 'properties'.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+- Side effect is when a function tries to modify anything outside its body. To sync effects in a React component, you will need to have to use your setter and getter within the useEffect hook.
